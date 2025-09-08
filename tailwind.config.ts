@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+      },
       container: {
-        padding: '1rem', 
+        padding: '1rem',
         center: true,
-      }
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

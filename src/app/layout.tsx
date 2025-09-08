@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import clsx from "clsx";
 import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(dmSans.className, "antialiased")}>{children}</body>
+      <body className={clsx(poppins.variable, "font-poppins antialiased")}>
+        {children}
+      </body>
     </html>
   );
 }
